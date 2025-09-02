@@ -299,6 +299,14 @@ app.delete('/api/addresses/:addressId', (req, res) => {
   });
 });
 
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 const PORT = process.env.PORT || 5000; // Use environment variable for port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
