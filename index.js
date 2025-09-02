@@ -1,7 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
-const path = require('path');
+
 require('dotenv').config(); // Add this line to load environment variables
 
 const app = express();
